@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <img src="https://static.cedet.com.br/produtos_imagem_principal_large/10984-525x791.jpg?v=1750275659" alt="Capa do livro" width="250">
+
+    <h1>O Diário de Anne Frank</h1>
+
+    <form action="/avaliacao" method="POST">
+
+        {% csrf_token %}
+
+        <label>Nome:</label>
+        <br>
+
+        <input type="text" name="nome">
+        <br> <br>
+
+        <label>Comentário:</label>
+        <br>
+
+        <input type="text" name="comentario">
+        <br> <br>
+
+        <label>Nota:</label>
+        <br>
+
+        <select name="nota">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+        </select>
+
+        <br> <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
